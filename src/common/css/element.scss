@@ -1,0 +1,76 @@
+@mixin flex($direction:column,$inline:block) {
+  display: if($inline==block, flex, inline-flex);
+  flex-direction: $direction;
+  flex-wrap: nowrap;
+}
+
+@mixin btn($size:14px,$color:#fff,$bgcolor:#F04752,$padding:5px,$radius:5px) {
+  padding: $padding;
+  background-color: $bgcolor;
+  border-radius: $radius;
+  border: 1px solid $bgcolor;
+  font-size: $size;
+  color: $color;
+  text-align: center;
+  line-height: 1;
+  display: inline-block;
+}
+
+@mixin layout($direction:column) {
+  @include flex($direction);
+}
+
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:112px,$txtPadding:0 32px,$color:#333,$fontSize:32px) {
+  padding: $padding;
+  margin: $margin;
+  background: $bgcolor;
+  > h4 {
+    height: $height;
+    line-height: $height;
+    padding: $txtPadding;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    color: $color;
+    font-size: $fontSize;
+    font-weight: 700;
+  }
+}
+
+@mixin left() {
+  float: left \9;
+}
+
+@mixin right() {
+  float: right \9;
+}
+
+@mixin border-top($left:0,$color:#e0e2e4) {
+  &:before{
+    position: absolute;
+    left: $left;
+    right: 0;
+    top: 0;
+    content: '';
+    border-top: 1px solid $color;
+  }
+}
+@mixin border-bottom($left:0,$color:#e0e2e4) {
+  &:after{
+    position: absolute;
+    left: $left;
+    right: 0;
+    bottom: 0;
+    content: '';
+    border-bottom: 1px solid $color;
+  }
+}
+
+
