@@ -5,6 +5,10 @@ import Archives from 'components/archives/archives'
 import Analysis from 'components/analysis/analysis'
 import Attachment from 'components/attachment/attachment'
 import System from 'components/system/system'
+// import EIndex from 'components/analysis/emissionsStatistics/index'
+// import EIndustry from 'components/analysis/emissionsStatistics/Industry'
+// import ERiver from 'components/analysis/emissionsStatistics/river'
+// import EAreaIndustry from 'components/analysis/emissionsStatistics/areaIndustry'
 
 Vue.use(Router)
 
@@ -24,7 +28,9 @@ export default new Router({
     },
     {
       path: '/analysis',
-      component: Analysis
+      component: Analysis,
+      children: [
+      ]
     },
     {
       path: '/attachment',

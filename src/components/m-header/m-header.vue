@@ -92,7 +92,14 @@
       background: #1167a3;
       border-left: 1px solid #0e588b;
       border-right: 1px solid #0e588b;
+      @include flex(row);
       @include right;
+      .user, .quit {
+        flex: 1
+      }
+      .user {
+        border-right: 1px solid #0e588b;
+      }
     }
   }
 </style>

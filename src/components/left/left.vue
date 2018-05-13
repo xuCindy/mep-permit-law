@@ -34,8 +34,10 @@
       position: relative;
       height: 40px;
       line-height: 40px;
-      background: #e7f0f7;
-      text-align: center;
+      font-size: $font-size-medium;
+      text-align: left;
+      padding-left: 54px;
+      background: #e7f0f7 url("leftico.png") no-repeat 26px center;
       @include border-bottom(20px);
     }
     .menus {

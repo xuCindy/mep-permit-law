@@ -9,7 +9,7 @@
       <Right :crumbs="crumbs">
         <ul class="nav">
           <li v-for="(list,index) in crumbs" :key="index">
-            <router-link to="home">{{list}}</router-link>
+            {{list}}
           </li>
         </ul>
       </Right>
@@ -29,66 +29,93 @@
         menuList: [
           {
             name: '实施检查统计',
+            src: '../src/common/images/leftico01.png',
             list: [
               {
                 url: '',
-                content: '地区'
+                content: '地区',
+                path: '',
+                isHover: true
               },
               {
                 url: '',
-                content: '行业'
+                content: '行业',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '流域'
+                content: '流域',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '地区-行业'
+                content: '地区-行业',
+                path: '',
+                isHover: false
               }
             ],
             show: true
           },
           {
             name: '执行报告填写情况',
+            src: '../../common/images/leftico02.png',
             list: [
               {
                 url: '',
-                content: '地区'
+                content: '地区',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '行业'
+                content: '行业',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '流域'
+                content: '流域',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '地区-行业'
+                content: '地区-行业',
+                path: '',
+                isHover: false
               }
             ],
             show: false
           },
           {
             name: '实际排放量统计',
+            src: '../src/common/images/leftico01.png',
             list: [
               {
                 url: '',
-                content: '地区'
+                content: '地区',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '行业'
+                content: '行业',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '流域'
+                content: '流域',
+                path: '',
+                isHover: false
               },
               {
                 url: '',
-                content: '地区-行业'
+                content: '地区-行业',
+                path: '',
+                isHover: false
               }
             ],
             show: false

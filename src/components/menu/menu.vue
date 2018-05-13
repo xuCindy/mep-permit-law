@@ -2,11 +2,12 @@
   <div>
     <ul class="menus">
       <li @click="showFlag(index,item)" v-for="(item,index) in menuList" :key="index" class="menu-item">
-        <span class="title" :class="[{active:item.show}]">{{item.name}}<img src="./iconrow.png"
-                                                                            class="arr-down"/></span>
+        <span class="title" :class="[{active:item.show}]"><img :src="item.src" class="sign"/> {{item.name}}<img
+          src="./iconrow.png" class="arr-down"/></span>
         <ul v-show="item.show" class="item-list">
-          <li v-for="(list,index) in item.list" :key="index" v-on:click.stop="doThis(index)" class="list-content">
-            <router-link :to="{ path: '/' }"><em></em>{{list.content}}</router-link>
+          <li v-for="(list,index) in item.list" :key="index" class="list-content" v-on:click.stop="doThis(index)">
+            <router-link :to="{ path: list.path }" :class="{ hover: index===current}"><em></em>{{list.content}}
+            </router-link>
           </li>
         </ul>
       </li>
@@ -16,6 +17,11 @@
 
 <script type="text/ecmascript-6">
   export default {
+    data() {
+      return {
+        current: 0
+      }
+    },
     props: {
       menuList: {
         type: Array,
@@ -36,7 +42,7 @@
         // console.log(item.name)
       },
       doThis: function (index) {
-        // alert(index)
+        this.current = index
       }
     }
   }
@@ -57,10 +63,14 @@
         position: relative;
         display: inline-block;
         width: 100%;
-        padding-left: 44px;
-        font-size: $font-size-medium-x;
+        padding-left: 20px;
+        font-size: $font-size-medium;
         color: $color-text;
         @include border-bottom(20px);
+        .sign {
+          display: inline-block;
+          vertical-align: middle;
+        }
         .arr-down {
           position: absolute;
           right: $space;
@@ -103,6 +113,16 @@
               em {
                 background: $color-theme;
               }
+            }
+          }
+          .hover {
+            box-sizing: border-box;
+            background: #5999c5;
+            border: 1px solid #126dac;
+            line-height: 38px;
+            color: $color-theme;
+            em {
+              background: $color-theme;
             }
           }
         }
