@@ -29,6 +29,7 @@
         menuList: [
           {
             name: '系统维护',
+            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
                 url: '',
@@ -55,46 +56,4 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../common/css/variable";
-  @import "../../common/css/element";
-
-  .content {
-    @include layout(row);
-    position: absolute;
-    top: 80px;
-    bottom: 30px;
-    width: 100%;
-    overflow: hidden;
-    .panel-left {
-      margin-right: $space;
-      flex: 0 0 200px;
-      width: 200px;
-      height: 100%;
-      background: $color-theme;
-      @include left;
-    }
-    .panel-right {
-      flex: 1;
-      @include right;
-      width: calc(100% - 210px);
-      .nav {
-        display: inline-block;
-        font-size: 0;
-        > li {
-          display: inline-block;
-          font-size: $font-size-small;
-          > a {
-            display: block;
-            padding: 0 $space;
-          }
-          &:last-child {
-            > a {
-              font-size: $font-size-medium;
-              color: $color-text;
-            }
-          }
-        }
-      }
-    }
-  }
 </style>

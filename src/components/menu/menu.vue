@@ -37,9 +37,7 @@
             i.show = false
           }
         })
-        // 取反(true或false)
         item.show = !item.show
-        // console.log(item.name)
       },
       doThis: function (index) {
         this.current = index
@@ -64,9 +62,10 @@
         display: inline-block;
         width: 100%;
         padding-left: 20px;
-        font-size: $font-size-medium;
+        font-size: $font-size-small;
+        font-weight: 700;
         color: $color-text;
-        @include border-bottom(20px);
+        @include border-bottom();
         .sign {
           display: inline-block;
           vertical-align: middle;
@@ -88,13 +87,13 @@
         .list-content {
           position: relative;
           height: 40px;
-          @include border-bottom(20px);
+          @include border-bottom();
           > a {
             display: block;
             height: 39px;
             padding-left: 35px;
             color: $color-text;
-            font-size: $font-size-medium;
+            font-size: $font-size-small;
             em {
               display: inline-block;
               margin-right: 6px;

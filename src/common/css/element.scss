@@ -1,3 +1,4 @@
+@import "variable";
 @mixin flex($direction:column,$inline:block) {
   display: if($inline==block, flex, inline-flex);
   flex-direction: $direction;
@@ -45,15 +46,17 @@
 }
 
 @mixin left() {
-  float: left \9;
+  float: left \9
+;
 }
 
 @mixin right() {
-  float: right \9;
+  float: right \9
+;
 }
 
 @mixin border-top($left:0,$color:#e0e2e4) {
-  &:before{
+  &:before {
     position: absolute;
     left: $left;
     right: 0;
@@ -62,14 +65,55 @@
     border-top: 1px solid $color;
   }
 }
+
 @mixin border-bottom($left:0,$color:#e0e2e4) {
-  &:after{
+  &:after {
     position: absolute;
     left: $left;
     right: 0;
     bottom: 0;
     content: '';
     border-bottom: 1px solid $color;
+  }
+}
+
+.content {
+  @include layout(row);
+  position: absolute;
+  top: 80px;
+  bottom: 30px;
+  width: 100%;
+  overflow: hidden;
+  .panel-left {
+    margin-right: $space;
+    flex: 0 0 200px;
+    width: 200px;
+    height: 100%;
+    background: $color-theme;
+    @include left;
+  }
+  .panel-right {
+    flex: 1;
+    @include right;
+    width: calc(100% - 210px);
+    .nav {
+      display: inline-block;
+      font-size: 0;
+      > li {
+        display: inline-block;
+        font-size: $font-size-small;
+        > a {
+          display: block;
+          padding: 0 $space;
+        }
+        &:last-child {
+          > a {
+            font-size: $font-size-medium;
+            color: $color-text;
+          }
+        }
+      }
+    }
   }
 }
 
