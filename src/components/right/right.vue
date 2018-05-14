@@ -1,30 +1,25 @@
 <template>
-  <section :class='[panelClass,cname]'>
-    <div class="crumbs-nav" :crumbs="crumbs">
-      <span>位置：</span>
-      <slot></slot>
+  <section class="list-wrapper" ref="listWrapper">
+    <div class="list-content">
+      <div class="crumbs-nav" :crumbs="crumbs">
+        <span class="address">位置：</span>
+        <slot></slot>
+      </div>
+      <div class="select-option">
+      </div>
+      <v-table
+        :columns='columns'
+        :table-data='tableData'
+        :show-vertical-border='false'
+      ></v-table>
     </div>
-    <div class="select-option">
-    </div>
-    <v-table
-      :columns='columns'
-      :table-data='tableData'
-      :show-vertical-border='false'
-    ></v-table>
   </section>
 </template>
 
 <script type='text/ecmascript-6'>
+  import BScroll from 'better-scroll'
   export default {
     props: {
-      cname: {
-        type: String,
-        default: ''
-      },
-      title: {
-        type: String,
-        default: ''
-      },
       crumbs: {
         type: Array,
         default: null
@@ -47,7 +42,27 @@
         ],
         panelClass: 'panel'
       }
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.scroll = new BScroll(this.$refs.listWrapper, {})
+      })
+    },
+    methods: {
+
     }
+    /* methods: {
+      _initScroll() {
+        this.scroll = new BScroll(this.$refs.listWrapper, {
+          // click: true
+        })
+      }
+    },
+    created () {
+      this.$nextTick(() => {
+        this._initScroll()
+      })
+    } */
   }
 </script>
 
@@ -55,26 +70,28 @@
   @import '../../common/css/variable';
   @import '../../common/css/element';
 
-  .panel {
+  .list-content {
     .crumbs-nav {
       position: relative;
       height: 40px;
       line-height: 40px;
       overflow: hidden;
       font-size: 0;
-      > span {
+      .address {
         display: inline-block;
         padding-left: 15px;
         font-size: $font-size-small;
+        font-weight: bold;
         color: $color-span;
-        line-height: 40px;
+        line-height: 44px;
         vertical-align: top;
+        background: url("./ico_address.png") no-repeat left center;
       }
     }
     .select-option {
       margin-bottom: $space;
       background: #fff;
-      height: 100px;
+      height: 1000px;
     }
   }
 </style>

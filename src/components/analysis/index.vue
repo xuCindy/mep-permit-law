@@ -6,13 +6,9 @@
       </Left>
     </div>
     <div class="panel-right">
-      <Right :crumbs="crumbs">
-        <ul class="nav">
-          <li v-for="(list,index) in crumbs" :key="index">
-            {{list}}
-          </li>
-        </ul>
-      </Right>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -25,32 +21,27 @@
   export default {
     data() {
       return {
-        crumbs: ['统计分析', '实施检查统计', '地区'],
         menuList: [
           {
             name: '实施检查统计',
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
-                url: '',
                 content: '地区',
                 path: '',
                 isHover: true
               },
               {
-                url: '',
                 content: '行业',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '流域',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '地区-行业',
                 path: '',
                 isHover: false
@@ -63,25 +54,21 @@
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
-                url: '',
                 content: '地区',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '行业',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '流域',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '地区-行业',
                 path: '',
                 isHover: false
@@ -94,25 +81,21 @@
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
-                url: '',
                 content: '地区',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '行业',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '流域',
                 path: '',
                 isHover: false
               },
               {
-                url: '',
                 content: '地区-行业',
                 path: '',
                 isHover: false

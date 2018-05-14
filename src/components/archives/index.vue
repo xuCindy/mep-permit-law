@@ -6,13 +6,9 @@
       </Left>
     </div>
     <div class="panel-right">
-      <Right :crumbs="crumbs">
-        <ul class="nav">
-          <li v-for="(list,index) in crumbs" :key="index">
-            {{list}}
-          </li>
-        </ul>
-      </Right>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -25,21 +21,18 @@
   export default {
     data() {
       return {
-        crumbs: ['实施档案库', '实施档案', '企业实施档案'],
         menuList: [
           {
             name: '实施档案',
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
-                url: '',
                 content: '企业实施档案',
-                path: ''
+                path: '/archives/report-all'
               },
               {
-                url: '',
                 content: '提报企业导出',
-                path: ''
+                path: '/archives/report-excel'
               }
             ],
             show: true
@@ -47,6 +40,16 @@
           {
             name: '空间分析',
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            list: [
+              {
+                content: '污染源空间分析',
+                path: '/archives/space-source'
+              },
+              {
+                content: '排放量空间分析',
+                path: '/archives/space-discharge'
+              }
+            ],
             show: false
           }
         ]

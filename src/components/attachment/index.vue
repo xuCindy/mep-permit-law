@@ -6,13 +6,9 @@
       </Left>
     </div>
     <div class="panel-right">
-      <Right :crumbs="crumbs">
-        <ul class="nav">
-          <li v-for="(list,index) in crumbs" :key="index">
-            {{list}}
-          </li>
-        </ul>
-      </Right>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -25,21 +21,18 @@
   export default {
     data() {
       return {
-        crumbs: ['资料附件', '资料附件', '国家级资料附件'],
         menuList: [
           {
             name: '资料附件',
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
-                url: '',
                 content: '国家级资料附件',
-                path: ''
+                path: '/attachment/country'
               },
               {
-                url: '',
                 content: '地方资料附件',
-                path: ''
+                path: '/attachment/province'
               }
             ],
             show: true

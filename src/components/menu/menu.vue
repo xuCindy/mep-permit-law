@@ -49,7 +49,6 @@
 <style lang="scss" scoped>
   @import "../../common/css/variable";
   @import "../../common/css/element";
-
   .menus {
     width: 100%;
     .menu-item {
@@ -128,5 +127,4 @@
       }
     }
   }
-
 </style>

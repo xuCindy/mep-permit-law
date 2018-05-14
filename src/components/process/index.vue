@@ -6,13 +6,9 @@
       </Left>
     </div>
     <div class="panel-right">
-      <Right :crumbs="crumbs">
-        <ul class="nav">
-          <li v-for="(list,index) in crumbs" :key="index">
-            {{list}}
-          </li>
-        </ul>
-      </Right>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
   </div>
 </template>
@@ -32,24 +28,20 @@
             src: 'http://47.94.22.148:8091/static/images/leftico01.png',
             list: [
               {
-                url: '',
                 content: '许可执行情况',
-                path: ''
+                path: '/process/report-info'
               },
               {
-                url: '',
                 content: '监督检查情况',
-                path: ''
+                path: '/process/law-info'
               },
               {
-                url: '',
                 content: '无证排污统计',
-                path: ''
+                path: '/process/no-permit'
               },
               {
-                url: '',
                 content: '企业改正规定',
-                path: ''
+                path: '/process/correct'
               }
             ],
             show: true
@@ -59,9 +51,8 @@
             src: 'http://47.94.22.148:8091/static/images/leftico02.png',
             list: [
               {
-                url: '',
                 content: '撤回',
-                path: ''
+                path: '/process/back'
               }
             ],
             show: false
