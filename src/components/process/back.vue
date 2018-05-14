@@ -1,13 +1,15 @@
 <template>
-    <div>
-      <Right :crumbs="crumbs">
-        <ul class="nav">
-          <li v-for="(list,index) in crumbs" :key="index">
-            {{list}}
-          </li>
-        </ul>
-      </Right>
-    </div>
+  <section>
+    <Right :crumbs="crumbs">
+      <ul class="nav" slot="nav">
+        <li v-for="(list,index) in crumbs" :key="index">
+          {{list}}
+        </li>
+      </ul>
+      <div class="" slot="slt">ccccccc</div>
+      <div class="" slot="form">ccccccc</div>
+    </Right>
+  </section>
 </template>
 
 <script type="text/ecmascript-6">

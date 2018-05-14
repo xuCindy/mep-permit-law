@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <section>
     <Right :crumbs="crumbs">
-      <ul class="nav">
+      <ul class="nav" slot="nav">
         <li v-for="(list,index) in crumbs" :key="index">
           {{list}}
         </li>
       </ul>
+      <div class="" slot="slt">ccccccc</div>
+      <div class="" slot="form">ccccccc</div>
     </Right>
-  </div>
+  </section>
 </template>
-
 <script type="text/ecmascript-6">
   import Left from 'components/left/left'
   import Right from 'components/right/right'
@@ -18,7 +19,7 @@
   export default {
     data() {
       return {
-        crumbs: ['业务办理', '业务撤回', '撤回']
+        crumbs: ['业务办理', '监督管理', '企业改正规定']
       }
     },
     components: {

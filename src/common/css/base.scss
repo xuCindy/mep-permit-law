@@ -1,4 +1,5 @@
 @import "variable";
+@import "element";
 
 body, html{
   line-height: 1;
@@ -8,3 +9,45 @@ body, html{
   background: $color-background;
 }
 
+.content {
+  @include layout(row);
+  position: relative;
+  top: 80px;
+  bottom: 30px;
+  width: 100%;
+  // overflow: hidden;
+  .panel-left {
+    position: fixed;
+    top: 80px;
+    bottom: 30px;
+    margin-right: $space;
+    flex: 0 0 200px;
+    width: 200px;
+    height: 100%;
+    background: $color-theme;
+    @include left;
+  }
+  .panel-right {
+    flex: 1;
+    margin-left: 210px;
+    @include right;
+    width: calc(100% - 210px);
+  }
+}
+
+.nav {
+  display: inline-block;
+  font-size: 0;
+  > li {
+    display: inline-block;
+    font-size: $font-size-small;
+    color: $color-span;
+    padding: 0 $space;
+    background: url("http://47.94.22.148:8091/static/images/rlist.gif") no-repeat right center;
+    &:last-child {
+      font-size: $font-size-medium;
+      color: $color-text;
+      background: none;
+    }
+  }
+}

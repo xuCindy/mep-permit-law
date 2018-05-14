@@ -21,10 +21,13 @@
       </router-link>
     </div>
     <div class="user-center">
-      <span class="user">
-      </span>
-      <span class="quit">
-      </span>
+      <div class="user">
+        <img src="./ico_user.png" width="16" height="20" />
+        <i>王爱华</i>
+      </div>
+      <div class="quit">
+        <img src="./ico_quit.png" width="16" height="18"/>
+      </div>
     </div>
   </header>
 </template>
@@ -86,16 +89,50 @@
       }
     }
     .user-center {
-      flex: 0 0 160px;
-      width: 160px;
       height: 80px;
       background: #1167a3;
       border-left: 1px solid #0e588b;
       border-right: 1px solid #0e588b;
       @include flex(row);
       @include right;
-      .user, .quit {
-        flex: 1
+      .user {
+        flex: 1;
+        @include left;
+        min-width: 60px;
+        font-size: 0;
+        padding: 0 $space;
+        > img {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: $space;
+        }
+        i {
+          display: inline-block;
+          font-size: $font-size-small;
+          color: $color-theme;
+          font-style: normal;
+          line-height: 80px;
+          vertical-align: middle;
+        }
+      }
+      .quit {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        @include right;
+        img {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -9px;
+          margin-left: -8px;
+        }
+        &:hover {
+          img {
+            transform: rotate(180deg);
+          }
+        }
       }
       .user {
         border-right: 1px solid #0e588b;

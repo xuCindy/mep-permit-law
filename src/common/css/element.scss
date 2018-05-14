@@ -47,13 +47,11 @@
 }
 
 @mixin left() {
-  float: left \9
-;
+  float: left \9;
 }
 
 @mixin right() {
-  float: right \9
-;
+  float: right \9;
 }
 
 @mixin border-top($left:0,$color:#e0e2e4) {
@@ -78,42 +76,22 @@
   }
 }
 
-.content {
-  @include layout(row);
-  position: absolute;
-  top: 80px;
-  bottom: 30px;
-  width: 100%;
-  overflow: hidden;
-  .panel-left {
-    margin-right: $space;
-    flex: 0 0 200px;
-    width: 200px;
-    height: 100%;
-    background: $color-theme;
-    @include left;
-  }
-  .panel-right {
-    flex: 1;
-    @include right;
-    width: calc(100% - 210px);
-    .nav {
-      display: inline-block;
-      font-size: 0;
-      > li {
-        display: inline-block;
-        font-size: $font-size-small;
-        color: $color-span;
-        padding: 0 $space;
-        background: url("http://47.94.22.148:8091/static/images/rlist.gif") no-repeat right center;
-        &:last-child {
-          font-size: $font-size-medium;
-          color: $color-text;
-          background: none;
-        }
-      }
-    }
+// input组件样式
+@mixin ipt($width:118px,$height:28px,$border-color:#e0e0e0,$border-radius:14px,$focus-color:#126dac) {
+  width: $width;
+  height: $height;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  &:focus {
+    color: $focus-color;
   }
 }
-
-
+// button组件样式
+@mixin btn($width:90px,$height:30px,$bg-color:#126dac,$font-color:#fff,$font-size:14px,$border-radius:15px){
+  width: $width;
+  height: $height;
+  background: $bg-color;
+  color: $font-color;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}

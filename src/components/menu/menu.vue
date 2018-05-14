@@ -2,8 +2,10 @@
   <div>
     <ul class="menus">
       <li @click="showFlag(index,item)" v-for="(item,index) in menuList" :key="index" class="menu-item">
-        <span class="title" :class="[{active:item.show}]"><img :src="item.src" class="sign"/> {{item.name}}<img
-          src="./iconrow.png" class="arr-down"/></span>
+        <span class="title" :class="[{active:item.show}]">
+          <img :src="item.src" class="sign"/> {{item.name}}
+          <img src="./iconrow.png" class="arr-down"/>
+        </span>
         <ul v-show="item.show" class="item-list">
           <li v-for="(list,index) in item.list" :key="index" class="list-content" v-on:click.stop="doThis(index)">
             <router-link :to="{ path: list.path }" :class="{ hover: index===current}"><em></em>{{list.content}}
@@ -29,11 +31,11 @@
       }
     },
     methods: {
-      showFlag: function (ind, item) {
+      showFlag: function (index, item) {
         // 先循环数据中的show将其全部置为false,此时模板里的v-if判断生效关闭全部二级菜单,并移除样式
         this.menuList.forEach(i => {
           // 判断如果数据中的headerData[i]的show属性不等于当前数据的show属性那么menuList[i]等于false
-          if (i.show !== this.menuList[ind].show) {
+          if (i.show !== this.menuList[index].show) {
             i.show = false
           }
         })
@@ -49,6 +51,7 @@
 <style lang="scss" scoped>
   @import "../../common/css/variable";
   @import "../../common/css/element";
+
   .menus {
     width: 100%;
     .menu-item {
@@ -78,6 +81,10 @@
       .active {
         transition: all 1s ease-in-out;
         .arr-down {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
           transform: rotate(180deg);
         }
       }
@@ -102,15 +109,10 @@
               background: $color-text;
               vertical-align: middle;
             }
-            &:hover {
-              box-sizing: border-box;
-              background: #5999c5;
-              border: 1px solid #126dac;
-              line-height: 38px;
-              color: $color-theme;
-              em {
-                background: $color-theme;
-              }
+          }
+          &:hover {
+            a {
+              color: #00a4ac;
             }
           }
           .hover {
@@ -119,6 +121,9 @@
             border: 1px solid #126dac;
             line-height: 38px;
             color: $color-theme;
+            &:hover {
+              color: $color-theme;
+            }
             em {
               background: $color-theme;
             }

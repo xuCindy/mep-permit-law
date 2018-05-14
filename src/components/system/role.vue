@@ -1,13 +1,15 @@
 <template>
-  <div>
+  <section>
     <Right :crumbs="crumbs">
-      <ul class="nav">
+      <ul class="nav" slot="nav">
         <li v-for="(list,index) in crumbs" :key="index">
           {{list}}
         </li>
       </ul>
+      <div class="" slot="slt">ccccccc</div>
+      <div class="" slot="form">ccccccc</div>
     </Right>
-  </div>
+  </section>
 </template>
 
 <script type="text/ecmascript-6">
@@ -18,7 +20,7 @@
   export default {
     data() {
       return {
-        crumbs: ['系统维护', '系统维护', '角色管理']
+        crumbs: ['系统维护', '系统维护', '用户管理']
       }
     },
     components: {
@@ -30,5 +32,5 @@
 </script>
 
 <style lang="scss" scoped>
-
+  @import "../../common/css/variable";
 </style>

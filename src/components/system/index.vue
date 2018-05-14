@@ -28,11 +28,11 @@
             list: [
               {
                 content: '用户管理',
-                path: ''
+                path: '/system/user-info'
               },
               {
                 content: '角色管理',
-                path: ''
+                path: '/system/role'
               }
             ],
             show: true
