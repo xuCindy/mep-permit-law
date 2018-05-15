@@ -13,12 +13,12 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Right from 'components/right/right'
+  import Right from '../../../components/right/right'
 
   export default {
     data() {
       return {
-        crumbs: ['系统维护', '系统维护', '角色管理']
+        crumbs: ['统计分析', '实施检查统计', '行业']
       }
     },
     components: {

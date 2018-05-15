@@ -25,22 +25,22 @@
             list: [
               {
                 content: '地区',
-                path: '',
-                isHover: true
+                path: '/analysis/lawStatistics',
+                isHover: false
               },
               {
                 content: '行业',
-                path: '',
+                path: '/analysis/lawStatistics/industry',
                 isHover: false
               },
               {
                 content: '流域',
-                path: '',
+                path: '/analysis/lawStatistics/river',
                 isHover: false
               },
               {
                 content: '地区-行业',
-                path: '',
+                path: '/analysis/lawStatistics/areaIndustry',
                 isHover: false
               }
             ],
@@ -52,22 +52,22 @@
             list: [
               {
                 content: '地区',
-                path: '',
+                path: '/analysis/reportStatistics',
                 isHover: false
               },
               {
                 content: '行业',
-                path: '',
+                path: '/analysis/reportStatistics/industry',
                 isHover: false
               },
               {
                 content: '流域',
-                path: '',
+                path: '/analysis/reportStatistics/river',
                 isHover: false
               },
               {
                 content: '地区-行业',
-                path: '',
+                path: '/analysis/reportStatistics/areaIndustry',
                 isHover: false
               }
             ],
@@ -79,22 +79,22 @@
             list: [
               {
                 content: '地区',
-                path: '',
+                path: '/analysis/emissionsStatistics',
                 isHover: false
               },
               {
                 content: '行业',
-                path: '',
+                path: '/analysis/emissionsStatistics/industry',
                 isHover: false
               },
               {
                 content: '流域',
-                path: '',
+                path: '/analysis/emissionsStatistics/river',
                 isHover: false
               },
               {
                 content: '地区-行业',
-                path: '',
+                path: '/analysis/emissionsStatistics/areaIndustry',
                 isHover: false
               }
             ],

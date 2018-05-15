@@ -18,6 +18,19 @@ import ReportExcel from 'components/archives/report-excel'
 import SpaceSource from 'components/archives/space-source'
 import SpaceDischarge from 'components/archives/space-discharge'
 // 二级导航 统计分析
+import LSIndex from 'components/analysis/lawStatistics/index'
+import LSIndustry from 'components/analysis/lawStatistics/industry'
+import LSRiver from 'components/analysis/lawStatistics/river'
+import LSAreaIndustry from 'components/analysis/lawStatistics/areaIndustry'
+import RSIndex from 'components/analysis/reportStatistics/index'
+import RSIndustry from 'components/analysis/reportStatistics/industry'
+import RSRiver from 'components/analysis/reportStatistics/river'
+import RSAreaIndustry from 'components/analysis/reportStatistics/areaIndustry'
+import ESIndex from 'components/analysis/emissionsStatistics/index'
+import ESIndustry from 'components/analysis/emissionsStatistics/industry'
+import ESRiver from 'components/analysis/emissionsStatistics/river'
+import ESAreaIndustry from 'components/analysis/emissionsStatistics/areaIndustry'
+
 // 二级导航 资料附件
 import Country from 'components/attachment/country'
 import Province from 'components/attachment/province'
@@ -93,6 +106,58 @@ export default new Router({
       path: '/analysis',
       component: Analysis,
       children: [
+        {
+          path: '/',
+          redirect: '/analysis/lawStatistics'
+        },
+        {
+          path: '/analysis/lawStatistics',
+          component: LSIndex
+        },
+        {
+          path: '/analysis/lawStatistics/industry',
+          component: LSIndustry
+        },
+        {
+          path: '/analysis/lawStatistics/river',
+          component: LSRiver
+        },
+        {
+          path: '/analysis/lawStatistics/areaIndustry',
+          component: LSAreaIndustry
+        },
+        {
+          path: '/analysis/reportStatistics',
+          component: RSIndex
+        },
+        {
+          path: '/analysis/reportStatistics/industry',
+          component: RSIndustry
+        },
+        {
+          path: '/analysis/reportStatistics/river',
+          component: RSRiver
+        },
+        {
+          path: '/analysis/reportStatistics/areaIndustry',
+          component: RSAreaIndustry
+        },
+        {
+          path: '/analysis/emissionsStatistics',
+          component: ESIndex
+        },
+        {
+          path: '/analysis/emissionsStatistics/industry',
+          component: ESIndustry
+        },
+        {
+          path: '/analysis/emissionsStatistics/river',
+          component: ESRiver
+        },
+        {
+          path: '/analysis/emissionsStatistics/areaIndustry',
+          component: ESAreaIndustry
+        }
       ]
     },
     {
@@ -126,7 +191,7 @@ export default new Router({
           component: UserInfo
         },
         {
-          path: 'system/role-info',
+          path: '/system/role-info',
           component: RoleInfo
         }
       ]

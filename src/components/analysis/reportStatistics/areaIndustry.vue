@@ -1,24 +1,22 @@
 <template>
-  <section>
+  <div>
     <Right :crumbs="crumbs">
-      <ul class="nav" slot="nav">
+      <ul class="nav">
         <li v-for="(list,index) in crumbs" :key="index">
           {{list}}
         </li>
       </ul>
-      <div class="" slot="slt">ccccccc</div>
-      <div class="" slot="form">ccccccc</div>
     </Right>
-  </section>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import Right from 'components/right/right'
+  import Right from '../../../components/right/right'
 
   export default {
     data() {
       return {
-        crumbs: ['系统维护', '系统维护', '角色管理']
+        crumbs: ['统计分析', '实施检查统计', '地区-行业']
       }
     },
     components: {
