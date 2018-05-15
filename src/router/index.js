@@ -23,7 +23,7 @@ import Country from 'components/attachment/country'
 import Province from 'components/attachment/province'
 // 二级导航 系统维护
 import UserInfo from 'components/system/user-info'
-import Role from 'components/system/role'
+import RoleInfo from 'components/system/role-info'
 
 Vue.use(Router)
 
@@ -126,8 +126,8 @@ export default new Router({
           component: UserInfo
         },
         {
-          path: 'system/role',
-          component: Role
+          path: 'system/role-info',
+          component: RoleInfo
         }
       ]
     }

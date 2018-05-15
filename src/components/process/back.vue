@@ -13,9 +13,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Left from 'components/left/left'
   import Right from 'components/right/right'
-  import Menu from 'components/menu/menu'
 
   export default {
     data() {
@@ -24,9 +22,7 @@
       }
     },
     components: {
-      Left,
-      Right,
-      Menu
+      Right
     }
   }
 </script>

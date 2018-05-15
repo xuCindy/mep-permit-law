@@ -1,9 +1,7 @@
 <template>
   <div class="content">
     <div class="panel-left">
-      <Left title="业务办理">
-        <Menu :menuList="menuList"></Menu>
-      </Left>
+      <Left title="业务办理" :menuList="menuList"></Left>
     </div>
     <div class="panel-right">
       <keep-alive>
@@ -15,8 +13,6 @@
 
 <script type="text/ecmascript-6">
   import Left from 'components/left/left'
-  import Right from 'components/right/right'
-  import Menu from 'components/menu/menu'
 
   export default {
     data() {
@@ -61,9 +57,7 @@
       }
     },
     components: {
-      Left,
-      Right,
-      Menu
+      Left
     }
   }
 </script>
