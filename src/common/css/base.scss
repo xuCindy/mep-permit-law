@@ -1,7 +1,7 @@
 @import "variable";
 @import "element";
 
-body, html{
+body, html {
   line-height: 1;
   font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
   user-select: none;
@@ -48,6 +48,36 @@ body, html{
       font-size: $font-size-medium;
       color: $color-text;
       background: none;
+    }
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.v-table-title-class span {
+  font-weight: bold !important;
+}
+
+.opts {
+  > a {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: top;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: 1px solid #0761a5;
+    color: #0761a5;
+    border-radius: 15px;
+    transition: .3s;
+    &:hover {
+      background: #0761a5;
+      color: #fff;
     }
   }
 }

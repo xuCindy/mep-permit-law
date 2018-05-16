@@ -4,9 +4,7 @@
       <Left title="业务办理" :menuList="menuList"></Left>
     </div>
     <div class="panel-right">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </div>
   </div>
 </template>

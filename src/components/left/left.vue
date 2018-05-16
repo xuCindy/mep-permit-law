@@ -66,7 +66,7 @@
       text-align: left;
       padding-left: 54px;
       background: #e7f0f7 url("leftico.png") no-repeat 26px center;
-      @include border-bottom(20px);
+      @include border-bottom();
     }
     .menus {
       width: 100%;

@@ -4,9 +4,7 @@
       <Left title="实施档案库" :menuList="menuList"></Left>
     </div>
     <div class="panel-right">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -20,7 +18,7 @@
         menuList: [
           {
             name: '实施档案',
-            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            src: 'http://47.94.22.148:8091/static/images/leftico13.png',
             list: [
               {
                 content: '企业实施档案',
@@ -35,7 +33,7 @@
           },
           {
             name: '空间分析',
-            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            src: 'http://47.94.22.148:8091/static/images/leftico14.png',
             list: [
               {
                 content: '污染源空间分析',

@@ -4,12 +4,15 @@ import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'jquery'
+import '../static/component/layer/layer'
+import '../static/component/layer/theme/default/layer.css'
 import 'common/css/index.scss'
 
-// 引入样式
+/// 引入样式
 import 'vue-easytable/libs/themes-base/index.css'
 // 导入 table 和 分页组件
-import { VTable, VPagination } from 'vue-easytable'
+import {VTable, VPagination} from 'vue-easytable'
 
 // 注册到全局
 Vue.component(VTable.name, VTable)

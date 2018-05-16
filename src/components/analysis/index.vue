@@ -4,9 +4,7 @@
       <Left title="统计分析" :menuList="menuList"></Left>
     </div>
     <div class="panel-right">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -21,7 +19,7 @@
         menuList: [
           {
             name: '实施检查统计',
-            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            src: 'http://47.94.22.148:8091/static/images/leftico05.png',
             list: [
               {
                 content: '地区',
@@ -48,7 +46,7 @@
           },
           {
             name: '执行报告填写情况',
-            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            src: 'http://47.94.22.148:8091/static/images/leftico06.png',
             list: [
               {
                 content: '地区',
@@ -75,7 +73,7 @@
           },
           {
             name: '实际排放量统计',
-            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            src: 'http://47.94.22.148:8091/static/images/leftico07.png',
             list: [
               {
                 content: '地区',

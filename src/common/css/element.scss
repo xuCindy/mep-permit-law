@@ -82,16 +82,24 @@
   height: $height;
   border: 1px solid $border-color;
   border-radius: $border-radius;
+  outline: none;
+  text-indent: $space;
+  font-size: 12px;
   &:focus {
-    color: $focus-color;
+    border: 1px solid $focus-color;
   }
 }
 // button组件样式
-@mixin btn($width:90px,$height:30px,$bg-color:#126dac,$font-color:#fff,$font-size:14px,$border-radius:15px){
+@mixin btn($width:90px,$height:30px,$bg-color:#126dac,$font-color:#fff,$font-size:14px,$border-radius:15px,$bg-hover:#4cb0f9){
   width: $width;
   height: $height;
   background: $bg-color;
   color: $font-color;
   font-size: $font-size;
   border-radius: $border-radius;
+  border: none;
+  outline: none;
+  &:hover {
+    background: $bg-hover;
+  }
 }

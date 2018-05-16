@@ -4,9 +4,7 @@
       <Left title="资料附件" :menuList="menuList"></Left>
     </div>
     <div class="panel-right">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -20,7 +18,7 @@
         menuList: [
           {
             name: '资料附件',
-            src: 'http://47.94.22.148:8091/static/images/leftico01.png',
+            src: 'http://47.94.22.148:8091/static/images/leftico08.png',
             list: [
               {
                 content: '国家级资料附件',

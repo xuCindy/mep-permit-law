@@ -1,0 +1,65 @@
+@import "variable";
+
+.item-list {
+  float: left;
+  margin-left: 20px;
+  font-size: 0;
+  .list-title {
+    display: inline-block;
+    font-size: $font-size-small;
+    color: $color-text;
+    line-height: 30px;
+    vertical-align: top;
+  }
+  .list-content {
+    display: inline-block;
+  }
+}
+
+.tab-header {
+  margin-bottom: $space;
+  height: 30px;
+  width: 100%;
+  .tab {
+    float: left;
+    font-size: 0;
+    .tab-item {
+      display: inline-block;
+      font-size: $font-size-medium;
+      height: 30px;
+      line-height: 30px;
+      .list {
+        display: block;
+        padding: 0 $space;
+        color: $color-text;
+        margin-right: 20px;
+      }
+      &.active {
+        .list {
+          position: relative;
+          background: $color-button-active;
+          color: #fff;
+          &:after {
+            position: absolute;
+            right: -20px;
+            top: 0;
+            content: '';
+            background: url(http://47.94.22.148:8091/static/images/tabbg.png) no-repeat;
+            width: 20px;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .operate {
+    float: right;
+  }
+}
+
+.excel {
+  font-size: $font-size-small;
+}
+
+
+

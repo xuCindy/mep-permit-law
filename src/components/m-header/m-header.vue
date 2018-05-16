@@ -71,7 +71,7 @@
         cursor: pointer;
         .tab-link {
           display: block;
-          padding: 0 3px;
+          padding: 0 5px;
           color: $color-theme;
           font-size: $font-size-medium;
           img {
